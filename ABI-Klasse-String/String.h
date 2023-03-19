@@ -21,6 +21,7 @@ public:
 
 	String operator=(const String& str) { text = str.text; return *this; }
 	friend ostream& operator<<(ostream& os, const String& x);
+	friend istream& operator>>(istream& os, String& x);
 	String operator+ (const String& x2) { text += x2.text; return *this; }
 	bool operator< (const String& x2) { return text < x2.text; }
 	bool operator> (const String& x2) { return text > x2.text; }

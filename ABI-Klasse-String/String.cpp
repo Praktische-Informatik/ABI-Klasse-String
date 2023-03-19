@@ -5,6 +5,10 @@ ostream& operator<<(ostream& os, const String& x) {
 	return os;
 };
 
+istream& operator>>(istream& is, String& x) {
+	is >> x.text;
+	return is;
+}
 
 bool String::equals(String str)
 {

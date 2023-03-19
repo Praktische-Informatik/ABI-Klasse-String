@@ -8,7 +8,12 @@ int main()
     String str2(";;Klasse;;String;");
     String str3("Klasse String");
     String empty;
-     
+    String NotEmpty;
+    
+    cout << "Eingabe eines Strings: ";
+    cin >> NotEmpty;
+    cout << NotEmpty << endl;
+
     //std::cout << str << "  " << /*(str < test)*/ << endl; 
     cout << "Split-function (on: ;; | spaces: -): " << str.split(";;")[0] << "-" << str.split(";;")[1] << "-" << str.split(";;")[2] << "-" << endl;
     cout << "Empty (true): " << empty.isEmpty() << "  Empty (false): " << str.isEmpty() << endl;
