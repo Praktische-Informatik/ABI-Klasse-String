@@ -10,6 +10,13 @@ istream& operator>>(istream& is, String& x) {
 	return is;
 }
 
+String operator+(string x1, String x2) { return x1 + x2.toC_string(); }
+bool operator< (string x1, String x2) { return x1 < x2.toC_string(); }
+bool operator> (string x1, String x2) { return x1 > x2.toC_string(); }
+bool operator== (string x1, String x2) { return x1 == x2.toC_string(); }
+bool operator!= (string x1, String x2) { return x1 != x2.toC_string(); }
+
+
 bool String::equals(String str)
 {
 	return *this == str;
@@ -27,8 +34,8 @@ String* String::split(String splitPoint)
 		}
 	};
 	anzahl();
-	String* allsp = new String[anz+1];
-	
+	String* allsp = new String[anz + 1];
+
 	auto splittext = [=]() mutable {
 		for (int i = 0; i < anz + 1; i++) {
 			allsp[i] = text.substr(0, text.find(sp));
@@ -49,7 +56,7 @@ bool String::isEmpty()
 	return (text.length() == 0) ? true : false;
 }
 
-int String::length()
+size_t String::length()
 {
 	return text.length();
 }

@@ -1,10 +1,12 @@
 #include "String.h"
+#include <string>
 using namespace std;
 
 int main()
 {
     string test = "string aus STL";
     String str(";;Klasse;;String;");
+    String zahl("1234");
     String str2(";;Klasse;;String;");
     String str3("Klasse String");
     String empty;
@@ -13,6 +15,11 @@ int main()
     cout << "Eingabe eines Strings: ";
     cin >> NotEmpty;
     cout << NotEmpty << endl;
+    cout << stoi(zahl.toC_string()) << endl;
+    zahl = "1234+" + zahl + test + zahl;
+    cout << zahl << endl;
+    cout << (string("234") > zahl);
+    cout << ("zahl" < string("234"));
 
     //std::cout << str << "  " << /*(str < test)*/ << endl; 
     cout << "Split-function (on: ;; | spaces: -): " << str.split(";;")[0] << "-" << str.split(";;")[1] << "-" << str.split(";;")[2] << "-" << endl;
