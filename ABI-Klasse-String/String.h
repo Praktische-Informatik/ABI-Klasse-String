@@ -19,6 +19,7 @@ public:
 	String(const String& str);
 	String(const char* str);
 
+	string toC_string() { string t = text; return t; } // Sting to string >> um z.B. stoi benutzen zu können
 	String operator=(const String& str) { text = str.text; return *this; }
 	friend ostream& operator<<(ostream& os, const String& x);
 	friend istream& operator>>(istream& os, String& x);
