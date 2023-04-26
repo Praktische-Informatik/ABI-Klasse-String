@@ -28,4 +28,5 @@ int main()
     cout << "Equals (true): " << str.equals(str2) << "  Equals (true): " << str.equals(";;Klasse;;String;") << "  Equals (false): " << str.equals(str3) << endl;
     cout << "Laenge-str (17): " << str.length() << endl;
 
+    return 0;
 }

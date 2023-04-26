@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="ABI-Klasse-String.cpp" />
     <ClCompile Include="String.cpp" />
-    <ClCompile Include="test2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="String.h" />
