@@ -6,8 +6,7 @@ string --> C++ Methoden funktionieren
 String --> Java(-Simulation) Methoden funktionieren
 
 Der laufende Wechsel im Code zwischen String  und string muss mit Hilfe 
-von toC-String() (von Java-String zu Cpp-string) und 
-
+von toC-String() (von Java-String zu Cpp-string)
 */
 
 
@@ -29,8 +28,8 @@ int main()
     cin >> NotEmpty;
     cout << NotEmpty << endl;
     cout << stoi(zahl.toC_string()) + 10 << endl;    // Umwandlung von einem Java-String in einen Cpp-String mit toC-String()  und dann einer Umwandlung in ein int mit stoi().
-    zahl = "1234+" + zahl + test + zahl;  //               
-    cout << zahl << endl;
+    zahl = "1234+" + zahl + test + zahl;  // Java- und Cpp-String mit dem +Operator vereinen.  
+    cout << zahl << endl;                 // Testausgabe  
     cout << (string("234") > zahl);
     cout << ("zahl" < string("234"));
 
